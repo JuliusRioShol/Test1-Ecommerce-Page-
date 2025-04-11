@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ .Title }}</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+    </head>
+    <body>
+<!-- This section is for our Navigation Bar -->
+    <section id="header">
+        <a href="#"> <img src="/static/img/logo.png" class="logo" alt=""> </a>
+   
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active"  href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>               
+                
+            </ul>
+
+        </div>   
+    </section>
+    
+<!-- This Section is for first set of text & img -->
+    <section id="hero">
+        <h4>Trade in-offer</h4>
+        <h2>Super value deals</h2>
+        <h1>On all products</h1>
+        <p>Save more with coupons & up to 70% off!</p>
+        <button>Shop now</button>
+    </section>
+
+
+<!-- Section for products  -->
+
+
+    <!-- Section for products -->
+    <section id="product1" class="section-p1">
+        <div class="pro-container">
+            {{ range .Products }}
+
+
+            <div class="pro">
+                <img src="{{ .ImageURL }}" alt="{{ .Name }}">
+                <div class="des">
+                    <span>{{ .Brand }}</span>
+                    <h5>{{ .Name }}</h5>
+                    <div class="star">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>{{ printf "%.2f" .Price }}</h4>
+                </div>
+
+                <button type="submit">
+                <a href="/product/{{ .ID}}"><i class="fal fa-shopping-cart cart"></i></a>
+                <button>
+            </div>
+            
+            {{ end }}
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Julius Shol Ecommerce Page</title>
+    <!-- "/ui/static/css/style.css" -->
+    <link rel="stylesheet" href="/static/css/start.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+</head>
+<body>
+    <div class="form-container">
+        <h1>{{.HeaderText}}</h1>
+        
+        <form>
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Enter your full name">
+                    <div class="error"></div>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    <div class="error"></div>
+            </div>
+            
+            <div class="form-group">
+                <input type="text" id="subject" name="subject" placeholder="Brief subject of your message">
+                    <div class="error"></div>
+            </div>            
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
